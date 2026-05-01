@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 export default function Services({ config }: { config: SiteConfig }) {
   const { services } = config;
 
-  if (!services || services.length === 0) return null;
+  // Defensive check: if services is missing or items array is empty
+  if (!services || !services.items || services.items.length === 0) return null;
 
   return (
     <section className="py-24 px-4 border-t border-zinc-900 bg-zinc-950/50">
@@ -20,15 +21,17 @@ export default function Services({ config }: { config: SiteConfig }) {
           className="max-w-2xl mx-auto text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-50">
-            Nuestros Servicios
+            {services.sectionTitle || "Nuestros Servicios"}
           </h2>
-          <p className="text-zinc-400">
-            Soluciones profesionales adaptadas a tus necesidades.
-          </p>
+          {services.sectionSubtitle && (
+            <p className="text-zinc-400">
+              {services.sectionSubtitle}
+            </p>
+          )}
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.items.map((service, index) => (
             <motion.div 
               key={service.id} 
               initial={{ opacity: 0, y: 30 }}

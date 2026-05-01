@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 export default function Navbar({ config }: { config: SiteConfig }) {
-  const { business } = config;
+  const { business, navbar } = config;
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
 
@@ -52,7 +52,7 @@ export default function Navbar({ config }: { config: SiteConfig }) {
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-lg bg-theme-primary text-white text-sm font-medium hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-theme-primary/20"
             >
-              Contactar
+              {navbar?.ctaText || "Contactar"}
             </a>
           )}
         </div>

@@ -1,23 +1,15 @@
 {
-  "theme": {
-    "primaryColor": "#0EA5E9",
-    "fontFamily": "Inter"
+  "theme": { "primaryColor": "#0EA5E9", "fontFamily": "Inter" },
+  "navbar": { "ctaText": "Agendar Cita" },
+  "business": { "name": "Clínica Dental Especializada", "whatsapp": "5215551234567", "address": "Nuevo Progreso, Tamps.", "logoUrl": null },
+  "hero": { "headline": "Odontología profesional y sin dolor", "subheadline": "Recupera tu sonrisa hoy.", "ctaText": "Agendar Cita Gratis", "heroImage": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop" },
+  "services": {
+    "sectionTitle": "Tratamientos Dentales",
+    "sectionSubtitle": "Cuidado experto para tu salud bucal.",
+    "items": [
+      { "id": "1", "title": "Implantes", "description": "Implantes de titanio de alta durabilidad.", "icon": "ShieldPlus" },
+      { "id": "2", "title": "Ortodoncia", "description": "Brackets invisibles y tradicionales.", "icon": "Smile" }
+    ]
   },
-  "business": {
-    "name": "Clínica Dental Especializada",
-    "whatsapp": "521XXXXXXXXXX",
-    "address": "Nuevo Progreso, Tamps.",
-    "logoUrl": null
-  },
-  "hero": {
-    "headline": "Odontología profesional y sin dolor",
-    "subheadline": "Recupera tu sonrisa hoy mismo con nuestros especialistas.",
-    "ctaText": "Agendar Cita Gratis",
-    "heroImage": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop"
-  },
-  "services": [
-    { "id": "1", "title": "Implantes", "description": "Implantes de titanio de alta durabilidad.", "icon": "ShieldPlus" },
-    { "id": "2", "title": "Ortodoncia", "description": "Brackets invisibles y tradicionales.", "icon": "Smile" }
-  ],
   "testimonials": []
 }

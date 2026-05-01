@@ -1,40 +1,24 @@
-export interface ThemeConfig {
-  primaryColor: string;
-  fontFamily: string;
+export interface ThemeConfig { primaryColor: string; fontFamily: string; }
+export interface BusinessConfig { name: string; whatsapp: string; address: string; logoUrl: string | null; }
+export interface HeroConfig { headline: string; subheadline: string; ctaText: string; heroImage: string; }
+export interface ServiceConfig { id: string; title: string; description: string; icon: string; }
+export interface TestimonialConfig { id: string; author: string; quote: string; rating: number; }
+
+export interface NavbarConfig {
+  ctaText?: string;
 }
 
-export interface BusinessConfig {
-  name: string;
-  whatsapp: string;
-  address: string;
-  logoUrl: string | null;
-}
-
-export interface HeroConfig {
-  headline: string;
-  subheadline: string;
-  ctaText: string;
-  heroImage: string;
-}
-
-export interface ServiceConfig {
-  id: string;
-  title: string;
-  description: string;
-  icon: string; // Refers to a Lucide React icon name
-}
-
-export interface TestimonialConfig {
-  id: string;
-  author: string;
-  quote: string;
-  rating: number;
+export interface ServicesSectionConfig {
+  sectionTitle?: string;
+  sectionSubtitle?: string;
+  items: ServiceConfig[];
 }
 
 export interface SiteConfig {
   theme: ThemeConfig;
+  navbar?: NavbarConfig;
   business: BusinessConfig;
   hero: HeroConfig;
-  services: ServiceConfig[];
+  services: ServicesSectionConfig;
   testimonials: TestimonialConfig[];
 }

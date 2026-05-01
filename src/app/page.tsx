@@ -1,13 +1,11 @@
-import siteConfig from "@/data/siteConfig.json";
-import { SiteConfig } from "@/types/site";
+import { getSiteConfig } from "@/lib/config";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 
 export default function Home() {
-  // Cast JSON to strictly typed interface
-  const config = siteConfig as SiteConfig;
+  const config = getSiteConfig();
 
   return (
     <main className="min-h-screen selection:bg-theme-primary/30">
