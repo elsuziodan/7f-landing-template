@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 export async function generateMetadata(): Promise<Metadata> {
   const config = getSiteConfig();
   return {
-    title: config.business.name,
-    description: config.hero.subheadline,
+    title: config?.business?.name || "Landing Page",
+    description: config?.hero?.subheadline || "",
   };
 }
 
@@ -23,8 +23,8 @@ export default function RootLayout({
 
   // Map JSON hex codes to CSS variables dynamically
   const dynamicStyles = {
-    "--theme-primary": config.theme.primaryColor,
-    "--theme-font": config.theme.fontFamily,
+    "--theme-primary": config?.theme?.primaryColor || "#0EA5E9",
+    "--theme-font": config?.theme?.fontFamily || "Inter",
   } as React.CSSProperties;
 
   return (
